@@ -1,0 +1,5 @@
+.clip-circle {
+  width: 300px;
+  -webkit-clip-path: circle(82.9% at 74% 33%);
+  clip-path: circle(59% at 74% 33%);
+}

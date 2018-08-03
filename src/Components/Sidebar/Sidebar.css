@@ -1,0 +1,27 @@
+#sidebar {
+  background: linear-gradient(rgba(76, 76, 76, 0.97), rgba(76, 76, 76, 0.97)),
+    url(./waves.svg);
+  background-size: 300px;
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: 0.45s;
+  transition-timing-function: ease-out;
+}
+#sidebar.closed {
+  transform: translate3d(-110%, 0, 0);
+  transition: 0.45s;
+  transition-timing-function: ease-out;
+}
+
+a.active-link {
+  color: var(--pinky-red) !important;
+}
+#sidebar a {
+  color: var(--kinda-white);
+}
+
+#sidebar a:hover {
+  text-decoration: none;
+  color: var(--pinky-red);
+}
