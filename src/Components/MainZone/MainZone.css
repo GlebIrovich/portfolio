@@ -2,6 +2,7 @@
   /* height: 1000px; */
   background-image: url(./trianglify_inner.svg);
   overflow: hidden;
+  min-height: 700px;
 }
 
 #dashed-line {

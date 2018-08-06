@@ -10,7 +10,7 @@ const HelloWorld = () => (
         <img src={photo} alt="" align="right" className="clip-circle" />
       </Col>
     </Row>
-    <Row className="h-50 text-right">
+    <Row className="text-right h-50">
       <Col className="align-self-end">
         <div id="my-name" className="pr-2 pr-lg-5 pb-3">
           <h1 className="text-dark-grey">

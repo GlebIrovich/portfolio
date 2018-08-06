@@ -1,10 +1,11 @@
 import React from 'react';
 import './Sidebar.css';
+import { Link } from 'react-router-dom';
 
 class Sidebar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { style: {}, className: 'closed' };
+    this.state = { style: {}, opened: false };
   }
 
   componentWillMount() {
@@ -13,7 +14,7 @@ class Sidebar extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.setStyle);
-    setTimeout(this.openSidenbar, 1000);
+    setTimeout(this.openSidenbar, 500);
   }
 
   componentWillUnmount() {
@@ -38,28 +39,39 @@ class Sidebar extends React.Component {
   };
 
   openSidenbar = () => {
-    this.setState({ className: '' });
+    this.setState({ opened: true });
   };
 
+  isActive(path) {
+    const { location } = this.props;
+    if (location.pathname === path) return 'active-link';
+    return '';
+  }
+
   render() {
-    const { style, className } = this.state;
+    const { style, opened } = this.state;
+    const { className, position } = this.props;
     return (
-      <div id="sidebar" className={`pt-3 pl-2 pl-lg-3 pb-3 ${className}`} style={style}>
-        <a href="#" className="active-link">
+      <div
+        id="sidebar"
+        className={`pt-3 pl-2 pl-lg-3 pb-3 ${position} ${opened ? '' : className}`}
+        style={style}
+      >
+        <Link to="/" className={this.isActive('/')}>
           <h3 className="h-25 d-inline d-lg-block">
 About
           </h3>
-        </a>
-        <a href="#" className="">
+        </Link>
+        <Link to="/skills" className={this.isActive('/skills')}>
           <h4 className="mt-5 d-inline d-lg-block ml-3 ml-lg-0">
 Skills
           </h4>
-        </a>
-        <a href="#" className="">
+        </Link>
+        <Link to="/projects" className={this.isActive('/projects')}>
           <h4 className="d-inline d-lg-block ml-3 ml-lg-0">
 Recent projects
           </h4>
-        </a>
+        </Link>
       </div>
     );
   }

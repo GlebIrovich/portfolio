@@ -1,17 +1,37 @@
 #sidebar {
   background: linear-gradient(rgba(76, 76, 76, 0.97), rgba(76, 76, 76, 0.97)),
     url(./waves.svg);
+
   background-size: 300px;
-  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.25);
+
   height: 100%;
   transform: translate3d(0, 0, 0);
+  transition: 0.75s;
+  transition-timing-function: ease-out;
+}
+@media (min-width: 992px) {
+  #sidebar {
+    min-height: 700px;
+  }
+}
+#sidebar.closed-right {
+  transform: translate3d(110%, 0, 0);
   transition: 0.45s;
   transition-timing-function: ease-out;
 }
-#sidebar.closed {
+
+#sidebar.closed-left {
   transform: translate3d(-110%, 0, 0);
   transition: 0.45s;
   transition-timing-function: ease-out;
+}
+
+#sidebar._left {
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.25);
+}
+
+#sidebar._right {
+  box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.25);
 }
 
 a.active-link {

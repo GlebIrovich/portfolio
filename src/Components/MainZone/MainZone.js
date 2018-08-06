@@ -1,30 +1,19 @@
 import React from 'react';
 import './MainZone.css';
-import { Row, Col } from 'reactstrap';
-import Sidebar from '../Sidebar/Sidebar';
-import Bio from '../Bio/Bio';
-import HelloWorld from '../HelloWorld/HelloWorld';
+import { Switch, Route } from 'react-router-dom';
+import MainPage from '../MainPage/MainPage';
+import SkillsPage from '../SkillsPage/SkillsPage';
+import ProjectsPage from '../ProjectsPage/ProjectsPage';
 
-class MainZone extends React.Component {
-  render() {
-    const { containerWidth } = this.props;
-    return (
-      <div id="main-zone">
-        {/* <div id="dashed-line" className="position-absolute" /> */}
-        <Row>
-          <Col lg="3">
-            <Sidebar width={containerWidth} />
-          </Col>
-          <Col lg="4">
-            <Bio />
-          </Col>
-          <Col className="order-first  order-lg-last">
-            <HelloWorld />
-          </Col>
-        </Row>
-      </div>
-    );
-  }
-}
+const MainZone = () => (
+  <div id="main-zone">
+    {/* <div id="dashed-line" className="position-absolute" /> */}
+    <Switch>
+      <Route exact path="/" component={MainPage} />
+      <Route exact path="/skills" component={SkillsPage} />
+      <Route exact path="/projects" component={ProjectsPage} />
+    </Switch>
+  </div>
+);
 
 export default MainZone;
