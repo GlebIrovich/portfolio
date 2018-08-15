@@ -1,8 +1,12 @@
 import React from 'react';
 import './Sidebar.css';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Sidebar extends React.Component {
+  static propTypes = {
+    history: PropTypes.object.isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.state = { style: {}, opened: false };
@@ -14,7 +18,7 @@ class Sidebar extends React.Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.setStyle);
-    setTimeout(this.openSidenbar, 500);
+    setTimeout(this.openSidebar, 500);
   }
 
   componentWillUnmount() {
@@ -38,7 +42,7 @@ class Sidebar extends React.Component {
     }
   };
 
-  openSidenbar = () => {
+  openSidebar = () => {
     this.setState({ opened: true });
   };
 
@@ -47,6 +51,14 @@ class Sidebar extends React.Component {
     if (location.pathname === path) return 'active-link';
     return '';
   }
+
+  handleClick = async (path) => {
+    await this.setState({ opened: false });
+    const { history } = this.props;
+    setTimeout(() => {
+      history.push(path);
+    }, 600);
+  };
 
   render() {
     const { style, opened } = this.state;
@@ -57,21 +69,32 @@ class Sidebar extends React.Component {
         className={`pt-3 pl-2 pl-lg-3 pb-3 ${position} ${opened ? '' : className}`}
         style={style}
       >
-        <Link to="/" className={this.isActive('/')}>
-          <h3 className="h-25 d-inline d-lg-block">
-About
-          </h3>
-        </Link>
-        <Link to="/skills" className={this.isActive('/skills')}>
-          <h4 className="mt-5 d-inline d-lg-block ml-3 ml-lg-0">
-Skills
-          </h4>
-        </Link>
-        <Link to="/projects" className={this.isActive('/projects')}>
-          <h4 className="d-inline d-lg-block ml-3 ml-lg-0">
-Recent projects
-          </h4>
-        </Link>
+        <h3
+          className={`d-inline d-lg-block delay-0 ${this.isActive('/')}`}
+          onClick={() => {
+            this.handleClick('/');
+          }}
+        >
+          About
+        </h3>
+
+        <h4
+          className={`mt-5 d-inline d-lg-block ml-3 ml-lg-0 delay-1 ${this.isActive('/skills')}`}
+          onClick={() => {
+            this.handleClick('/skills');
+          }}
+        >
+          Skills
+        </h4>
+
+        <h4
+          className={`d-inline d-lg-block ml-3 ml-lg-0 delay-2 ${this.isActive('/projects')}`}
+          onClick={() => {
+            this.handleClick('/projects');
+          }}
+        >
+          Recent projects
+        </h4>
       </div>
     );
   }

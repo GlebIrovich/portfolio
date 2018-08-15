@@ -91,7 +91,7 @@ class ProjectsPage extends React.Component {
 
   render() {
     const { projectOrder } = this.state;
-    const { location } = this.props;
+    const { location, history } = this.props;
 
     return (
       <Swipeable
@@ -115,7 +115,12 @@ class ProjectsPage extends React.Component {
             </div>
           </Col>
           <Col lg="3" className="order-first  order-lg-last">
-            <Sidebar className="closed-right" position="_right" location={location} />
+            <Sidebar
+              className="closed-right"
+              position="_right"
+              location={location}
+              history={history}
+            />
           </Col>
         </Row>
       </Swipeable>

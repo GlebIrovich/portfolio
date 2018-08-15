@@ -1,7 +1,7 @@
 import React from 'react';
 import './SkillBox.css';
 
-const styleSheet = document.styleSheets[4];
+const styleSheet = document.styleSheets[2];
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -25,19 +25,24 @@ class SkillBox extends React.Component {
   createAnimation = index => ({
     animationName: `fly-in${index}`,
     animationDuration: '1s',
-    animationDelay: 1 + Math.random(),
+    animationDelay: 1 + Math.random() * 2,
   });
 
   render() {
-    const { text, small, index } = this.props;
+    const { text, index } = this.props;
 
     styleSheet.insertRule(this.keyframes(index), styleSheet.cssRules.length);
+    const dim = getRandomInt(90, 200);
+    const size = {
+      width: dim,
+      height: dim,
+      lineHeight: `${dim}px`,
+      fontSize: dim < 120 ? '1.1rem' : '1.5rem',
+    };
     return (
       <div
-        className={`skill-box text-center d-inline-block mt-3 ml-3 align-middle hvr-bounce-to-top ${
-          small ? 'small' : ''
-        }`}
-        style={this.createAnimation(index)}
+        className="skill-box text-center d-inline-block mt-3 ml-3 align-middle hvr-bounce-to-top"
+        style={{ ...size, ...this.createAnimation(index) }}
       >
         {text}
       </div>

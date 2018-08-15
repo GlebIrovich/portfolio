@@ -18,3 +18,30 @@
   background-size: 2px 25px;
   background-repeat: repeat-y;
 }
+
+.fade-enter {
+  opacity: 0.01;
+  /* transform: translateY(7%); */
+}
+
+@media (max-width: 992px) {
+  .fade-enter {
+    /* transform: translateY(0%); */
+  }
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  /* transform: translateY(0%); */
+  transition: all 600ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+  /* transform: translateY(0%); */
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  /* transform: translateY(7%); */
+  transition: all 600ms ease-in;
+}

@@ -3,3 +3,55 @@
   -webkit-clip-path: circle(59% at 74% 33%);
   clip-path: circle(59% at 74% 33%);
 }
+
+@media screen and (min-width: 992px) {
+  #introduction {
+    animation-name: left-and-down;
+    animation-fill-mode: backwards;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+  }
+}
+
+/* #photo {
+  animation-name: none-and-fly;
+  animation-fill-mode: backwards;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+} */
+
+@keyframes left-and-down {
+  0% {
+    opacity: 0;
+    transform: translate3d(30px, -650px, 0);
+  }
+  17% {
+    opacity: 1;
+    transform: translate3d(-5px, -650px, 0);
+  }
+  20% {
+    transform: translate3d(0, -650px, 0);
+  }
+  80% {
+    transform: translate3d(0, -650px, 0);
+  }
+  97% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0px, 0);
+  }
+}
+
+/* @keyframes none-and-fly {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+  100% {
+    display: none;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+} */

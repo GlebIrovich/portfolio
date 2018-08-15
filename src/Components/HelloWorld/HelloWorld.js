@@ -4,7 +4,7 @@ import photo from './me.png';
 import './HelloWorld.css';
 
 const HelloWorld = () => (
-  <div className="h-100">
+  <div className="h-100" id="introduction">
     <Row className="h-50">
       <Col>
         <img src={photo} alt="" align="right" className="clip-circle" />

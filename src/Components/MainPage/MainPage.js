@@ -4,10 +4,10 @@ import Sidebar from '../Sidebar/Sidebar';
 import Bio from '../Bio/Bio';
 import HelloWorld from '../HelloWorld/HelloWorld';
 
-const MainPage = ({ location }) => (
+const MainPage = ({ location, history }) => (
   <Row>
     <Col lg="3">
-      <Sidebar className="closed-left" position="_left" location={location} />
+      <Sidebar className="closed-left" position="_left" location={location} history={history} />
     </Col>
     <Col lg="4">
       <Bio />
