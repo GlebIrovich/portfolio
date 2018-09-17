@@ -9,31 +9,11 @@ const setClassName = (pos) => {
 };
 const CardsList = ({ projectOrder, projects }) => (
   <React.Fragment>
-    <ProjectCard
-      text={projects['5'].text}
-      title={projects['5'].title}
-      className={setClassName(projectOrder[0])}
-    />
-    <ProjectCard
-      text={projects['1'].text}
-      title={projects['1'].title}
-      className={setClassName(projectOrder[1])}
-    />
-    <ProjectCard
-      text={projects['2'].text}
-      title={projects['2'].title}
-      className={setClassName(projectOrder[2])}
-    />
-    <ProjectCard
-      text={projects['3'].text}
-      title={projects['3'].title}
-      className={setClassName(projectOrder[3])}
-    />
-    <ProjectCard
-      text={projects['4'].text}
-      title={projects['4'].title}
-      className={setClassName(projectOrder[4])}
-    />
+    <ProjectCard project={projects['4']} className={setClassName(projectOrder[0])} />
+    <ProjectCard project={projects['1']} className={setClassName(projectOrder[1])} />
+    <ProjectCard project={projects['2']} className={setClassName(projectOrder[2])} />
+    <ProjectCard project={projects['3']} className={setClassName(projectOrder[3])} />
+    {/* <ProjectCard project={projects['4']} className={setClassName(projectOrder[4])} /> */}
   </React.Fragment>
 );
 

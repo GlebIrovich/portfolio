@@ -1,0 +1,30 @@
+p,
+ul.my-list {
+  font-family: "Archivo", sans-serif;
+}
+
+a.my-link {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+
+a.my-link:hover {
+  color: var(--mid-grey) !important;
+}
+
+a.my-link:focus {
+  color: var(--dark-grey) !important;
+}
+
+ul.my-list > li {
+  list-style-type: none;
+  transition: all 0.2s ease-in-out;
+}
+
+ul.my-list {
+  font-weight: 600;
+  cursor: pointer;
+}
+ul.my-list > li:hover {
+  font-weight: 700;
+}

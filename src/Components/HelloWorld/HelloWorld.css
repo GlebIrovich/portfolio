@@ -1,7 +1,12 @@
 .clip-circle {
   width: 300px;
-  -webkit-clip-path: circle(59% at 74% 33%);
-  clip-path: circle(59% at 74% 33%);
+  -webkit-clip-path: circle(65% at 69% 33%);
+  clip-path: circle(65% at 69% 33%);
+}
+
+img.clip-circle {
+  margin: -20px;
+  margin-bottom: 0px;
 }
 
 @media screen and (min-width: 992px) {
@@ -13,12 +18,11 @@
   }
 }
 
-/* #photo {
-  animation-name: none-and-fly;
-  animation-fill-mode: backwards;
-  animation-duration: 1s;
-  animation-delay: 0.9s;
-} */
+@media screen and (max-width: 374px) {
+  #introduction h4 {
+    font-size: 1.3rem;
+  }
+}
 
 @keyframes left-and-down {
   0% {

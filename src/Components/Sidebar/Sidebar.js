@@ -26,10 +26,17 @@ class Sidebar extends React.Component {
   }
 
   setStyle = () => {
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < 992 && window.innerWidth > 330) {
       this.setState({
         style: {
           height: 65,
+          boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.25)',
+        },
+      });
+    } else if (window.innerWidth <= 330) {
+      this.setState({
+        style: {
+          height: 55,
           boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.25)',
         },
       });

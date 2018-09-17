@@ -25,7 +25,7 @@ class SkillBox extends React.Component {
   createAnimation = index => ({
     animationName: `fly-in${index}`,
     animationDuration: '1s',
-    animationDelay: 1 + Math.random() * 2,
+    animationDelay: 300 + Math.random() * 100,
   });
 
   render() {
