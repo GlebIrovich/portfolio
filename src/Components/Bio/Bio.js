@@ -129,16 +129,20 @@ be turned into
     </h3>
 
     <h4 className="text-dark-grey mt-5 mb-5 pl-3 pl-sm-5 pl-lg-0 pr-3 pr-sm-5 pr-lg-0">
-      <a href="https://github.com/cookiehunter22" className="my-link">
+      <a href="https://github.com/cookiehunter22" className="my-link" target="_blank">
         <FontAwesomeIcon icon={faGithub} className="" />
       </a>
-      <a href="mailto:gleb.irovich@gmail.com" className="my-link">
+      <a href="mailto:gleb.irovich@gmail.com" className="my-link" target="_blank">
         <FontAwesomeIcon icon={faEnvelope} className="ml-2" />
       </a>
-      <a href="https://www.linkedin.com/in/gleb-irovich-001037bb/" className="my-link">
+      <a
+        href="https://www.linkedin.com/in/gleb-irovich-001037bb/"
+        className="my-link"
+        target="_blank"
+      >
         <FontAwesomeIcon icon={faLinkedin} className="ml-2" />
       </a>
-      <a href={file} download className="my-link">
+      <a href={file} className="my-link" target="_blank">
         <FontAwesomeIcon icon={faFilePdf} className="ml-2" />
       </a>
     </h4>

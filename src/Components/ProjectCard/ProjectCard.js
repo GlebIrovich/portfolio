@@ -5,17 +5,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 class ProjectCard extends React.PureComponent {
-  renderGh = () => {
-    const { project } = this.props;
-    if (project.links.gh) {
-      return (
-        <a href={project.links.gh} target="_blank" className="">
-          <FontAwesomeIcon icon={faGithub} className="" />
-        </a>
-      );
-    }
-  };
-
   render() {
     const { className, project } = this.props;
     return (
@@ -27,7 +16,16 @@ class ProjectCard extends React.PureComponent {
           {project.text}
         </p>
         <h4 className="text-right mb-0 mt-5 pl-2 pr-2 ">
-          {this.renderGh()}
+          {(() => {
+            if (project.links.gh) {
+              return (
+                <a href={project.links.gh} target="_blank" className="">
+                  <FontAwesomeIcon icon={faGithub} className="" />
+                </a>
+              );
+            }
+            return '';
+          })()}
           <a href={project.links.demo} target="_blank" className="">
             <FontAwesomeIcon icon={faLink} className="ml-2" />
           </a>
