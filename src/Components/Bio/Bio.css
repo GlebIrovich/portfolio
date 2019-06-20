@@ -23,8 +23,5 @@ ul.my-list > li {
 
 ul.my-list {
   font-weight: 600;
-  cursor: pointer;
-}
-ul.my-list > li:hover {
-  font-weight: 700;
+  cursor: default;
 }

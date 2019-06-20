@@ -1,7 +1,9 @@
-import React from 'react';
-import { Row, Col } from 'reactstrap';
-import photo from './me.png';
 import './HelloWorld.css';
+
+import React from 'react';
+import { Col, Row } from 'reactstrap';
+
+import photo from './me.png';
 
 const HelloWorld = () => (
   <div className="h-100" id="introduction">
@@ -27,7 +29,7 @@ Gleb Irovich
           <hr className="mr-0 mt-0 bg-mid-grey border-0" style={{ height: 2, width: 295 }} />
 
           <h4 className="text-mid-grey">
-I am a Full Stack Web Developer
+I am a Frontend Engineer
           </h4>
           <hr className="mr-0 mt-0 bg-mid-grey border-0" style={{ height: 2, width: 295 }} />
         </div>

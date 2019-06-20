@@ -32,13 +32,15 @@ class SkillsPage extends React.Component {
                 <SkillBox text="React js" key={1} index={1} />,
                 <SkillBox text="Express js" key={2} index={2} />,
                 <SkillBox text="Git" key={3} index={3} />,
-                <SkillBox text="CSS" key={4} index={4} />,
-                <SkillBox text="HTML" key={5} index={5} />,
+                <SkillBox text="CSS3" key={4} index={4} />,
+                <SkillBox text="HTML5" key={5} index={5} />,
                 <SkillBox text="Adobe" key={6} index={6} />,
                 <SkillBox text="Bootstrap 4" key={7} index={7} />,
-                <SkillBox text="Python" key={8} index={8} />,
+                <SkillBox text="GraphQL" key={8} index={8} />,
                 <SkillBox text="Django" key={9} index={9} />,
                 <SkillBox text="Falcon" key={10} index={10} />,
+                <SkillBox text="Scala" key={11} index={11} />,
+                <SkillBox text="Redux" key={12} index={12} />,
               ])}
             </div>
           </Col>

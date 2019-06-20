@@ -1,6 +1,5 @@
 #sidebar {
-  background: linear-gradient(rgba(76, 76, 76, 0.97), rgba(76, 76, 76, 0.97)),
-    url(./waves.svg);
+  background: linear-gradient(rgba(76, 76, 76, 0.97), rgba(76, 76, 76, 0.97));
 
   background-size: 300px;
 
@@ -91,9 +90,3 @@ h4.active-link {
     font-size: 1.2rem;
   }
 }
-
-/* h3, .h3 {
-  font-size: 1.75rem; }
-
-h4, .h4 {
-  font-size: 1.5rem; } */

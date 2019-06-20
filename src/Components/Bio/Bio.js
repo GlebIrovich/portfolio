@@ -1,12 +1,14 @@
-import React from 'react';
-import { Row, Col } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Bio.css';
+import './i_hate.css';
+import './i_like.css';
+
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { Col, Row } from 'reactstrap';
+
 import file from './gleb_irovich.pdf';
-import './Bio.css';
-import './i_like.css';
-import './i_hate.css';
 
 const Bio = () => (
   <div className="pt-3">
@@ -150,64 +152,3 @@ be turned into
 );
 
 export default Bio;
-
-// <ul className="my-list pt-2 pl-5 pl-lg-1 pr-5 pr-lg-0 text-dark-grey">
-//             <li>
-//               <span role="img" aria-label="Pizza">
-//                 🍕
-//               </span>
-//               <span className="icon-pizza" role="img" aria-label="Pizza" />
-//               {' '}
-// pizza
-//             </li>
-
-//             <li>
-//               <span role="img" aria-label="Coding">
-//                 👨‍💻
-//               </span>
-//               {' '}
-//               coding
-//             </li>
-//             <li>
-//               <span role="img" aria-label="Challenges">
-//                 😅
-//               </span>
-//               {' '}
-//               challenges
-//             </li>
-//             <li>
-//               <span role="img" aria-label="Creating web">
-//                 🎛️
-//               </span>
-//               {' '}
-//               creating web applications
-//             </li>
-//             <li>
-//               <span role="img" aria-label="Movies">
-//                 🎬
-//               </span>
-//               {' '}
-//               Marvel movies
-//             </li>
-//             <li>
-//               <span role="img" aria-label="Joystick">
-//                 🕹️
-//               </span>
-//               {' '}
-//               video games
-//             </li>
-//             <li>
-//               <span role="img" aria-label="Laptop">
-//                 💻
-//               </span>
-//               {' '}
-//               order on my desktop
-//             </li>
-//             <li>
-//               <span role="img" aria-label="Airplane">
-//                 ✈️
-//               </span>
-//               {' '}
-//               travelling
-//             </li>
-//           </ul>
