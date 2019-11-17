@@ -3,12 +3,9 @@ import './i_hate.css';
 import './i_like.css';
 
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Col, Row } from 'reactstrap';
-
-import file from './gleb_irovich.pdf';
 
 const Bio = () => (
   <div className="pt-3">
@@ -134,18 +131,12 @@ be turned into
       <a href="https://github.com/cookiehunter22" className="my-link" target="_blank">
         <FontAwesomeIcon icon={faGithub} className="" />
       </a>
-      <a href="mailto:gleb.irovich@gmail.com" className="my-link" target="_blank">
-        <FontAwesomeIcon icon={faEnvelope} className="ml-2" />
-      </a>
       <a
         href="https://www.linkedin.com/in/gleb-irovich-001037bb/"
         className="my-link"
         target="_blank"
       >
         <FontAwesomeIcon icon={faLinkedin} className="ml-2" />
-      </a>
-      <a href={file} className="my-link" target="_blank">
-        <FontAwesomeIcon icon={faFilePdf} className="ml-2" />
       </a>
     </h4>
   </div>
